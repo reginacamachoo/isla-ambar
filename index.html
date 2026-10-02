@@ -253,7 +253,7 @@
         ]}
       ]},
       { nombre: 'seguridad', hijos: [
-        { nombre: 'puertas', clave: 'TRUFA', archivos: [
+        { nombre: 'puertas', clave: 'MARCY', archivos: [
           { nombre: 'control.lck', tam: 1.3, accion: 'puertaControl' },
           { nombre: 'cocina.lck', tam: 0.9, accion: 'cerrar', texto: 'Cerradura de la cocina: CERRADA.\nBuena idea en general, pero tú estás en la sala de control.' },
           { nombre: 'raptores.lck', tam: 1.1, accion: 'cerrar', texto: 'Error: la reja del recinto de raptores está abierta y el recinto está vacío.\nCerrarla ahora no sirve de mucho.' }
@@ -279,7 +279,7 @@
       { nombre: 'personal', hijos: [
         { nombre: 'tecnico_ruiz', archivos: [
           { nombre: 'nota.txt', tam: 0.8, texto: 'Recordatorio para mí:\nya no uso mi fecha de nacimiento como clave.\nAhora es el nombre de mi perrita.\nNadie lo va a adivinar.' },
-          { nombre: 'perrita.jpg', tam: 2.0, texto: '[imagen]\nUna beagle sentada sobre el teclado de la sala de control.\nSu collar tiene una placa grabada: TRUFA.' },
+          { nombre: 'perrita.jpg', tam: 2.0, texto: '[imagen]\nUna beagle sentada sobre el teclado de la sala de control.\nSu collar tiene una placa grabada: MARCY.' },
           { nombre: 'arcade.exe', tam: 1.4, accion: 'arcade' }
         ]},
         { nombre: 'directora_vega', archivos: [
@@ -814,7 +814,7 @@ function pedirClave(n, despues) {
 function revisarClave() {
   const p = J.pendiente; if (!p) return;
   // trim() quita espacios de los lados; toUpperCase() convierte a mayúsculas.
-  // Así "trufa", " Trufa " y "TRUFA" cuentan igual.
+  // Así "MARCY", " MARCY " y "MARCY" cuentan igual.
   const escrita = $('campo-clave').value.trim().toUpperCase();
   if (!escrita) { $('clave-error').textContent = 'Escribe una clave primero.'; return; }
   if (escrita !== p.nodo.clave) {
